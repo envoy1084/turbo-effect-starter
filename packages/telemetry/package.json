@@ -28,10 +28,7 @@
     "type": "git",
     "url": "https://github.com/envoy1084/turbo-effect-starter"
   },
-  "scripts": {
-    "dev": "bun run src/index.ts",
-    "test": "vitest run"
-  },
+  "scripts": {},
   "sideEffects": false,
   "type": "module",
   "version": "0.0.0"

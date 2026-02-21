@@ -21,13 +21,9 @@ const PgLive = PgClient.layerConfig({
   },
 });
 
-export const makeDatabase = Effect.gen(function* () {
-  const db = pgDrizzle
-    .make({ relations })
-    .pipe(Effect.provide(pgDrizzle.DefaultServices));
-
-  return yield* db;
-}).pipe(Effect.provide(PgLive));
+export const makeDatabase = pgDrizzle
+  .make({ relations })
+  .pipe(Effect.provide(pgDrizzle.DefaultServices));
 
 export type DatabaseType = Effect.Effect.Success<typeof makeDatabase>;
 
@@ -36,4 +32,10 @@ export class Database extends Context.Tag("Database")<
   DatabaseType
 >() {}
 
-export const DatabaseLive = Layer.effect(Database, makeDatabase);
+const DatabaseLayer = Layer.effect(
+  Database,
+  Effect.gen(function* () {
+    return yield* makeDatabase;
+  }),
+);
+export const DatabaseLive = Layer.provideMerge(DatabaseLayer, PgLive);

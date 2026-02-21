@@ -7,7 +7,7 @@
     "@effect/sql": "^0.49.0",
     "@effect/sql-pg": "^0.50.3",
     "@repo/schema": "workspace:*",
-    "drizzle-orm": "^1.0.0-beta.15-859cf75",
+    "drizzle-orm": "1.0.0-beta.15-859cf75",
     "effect": "^3.19.19",
     "pg": "^8.18.0"
   },
@@ -27,10 +27,7 @@
     "type": "git",
     "url": "https://github.com/envoy1084/turbo-effect-starter"
   },
-  "scripts": {
-    "dev": "bun run src/index.ts",
-    "test": "vitest run"
-  },
+  "scripts": {},
   "sideEffects": false,
   "type": "module",
   "version": "0.0.0"

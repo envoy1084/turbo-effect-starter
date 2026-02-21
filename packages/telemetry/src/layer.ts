@@ -6,13 +6,9 @@ import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto";
 import { BatchLogRecordProcessor } from "@opentelemetry/sdk-logs";
 import { PeriodicExportingMetricReader } from "@opentelemetry/sdk-metrics";
 import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-base";
-import { Config, Effect, Layer, Redacted } from "effect";
+import { Effect, Layer, Redacted } from "effect";
 
-export const OtelConfig = Config.all({
-  baseUrl: Config.string("OTEL_BASE_URL"),
-  dataset: Config.string("OTEL_DATASET").pipe(Config.option),
-  token: Config.redacted("OTEL_API_TOKEN").pipe(Config.option),
-});
+import { OtelConfig } from "./config";
 
 export const OtelLive = Layer.unwrapEffect(
   Effect.gen(function* () {

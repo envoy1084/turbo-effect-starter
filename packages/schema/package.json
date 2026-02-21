@@ -4,7 +4,7 @@
     "url": "https://github.com/envoy1084/turbo-effect-starter/issues"
   },
   "dependencies": {
-    "drizzle-orm": "^1.0.0-beta.15-859cf75",
+    "drizzle-orm": "1.0.0-beta.15-859cf75",
     "uuid": "^13.0.0"
   },
   "description": "",
