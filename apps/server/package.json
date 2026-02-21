@@ -30,7 +30,7 @@
     "url": "https://github.com/envoy1084/turbo-effect-starter"
   },
   "scripts": {
-    "dev": "bun run src/index.ts",
+    "dev": "bun --watch run src/index.ts",
     "test": "vitest run"
   },
   "sideEffects": false,
