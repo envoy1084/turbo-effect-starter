@@ -23,6 +23,7 @@
   "homepage": "https://github.com/envoy1084/turbo-effect-starter#readme",
   "keywords": [],
   "license": "MIT",
+  "main": "src/index.ts",
   "name": "@repo/database",
   "repository": {
     "type": "git",
