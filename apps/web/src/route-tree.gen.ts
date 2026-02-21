@@ -12,9 +12,9 @@ import { Route as rootRouteImport } from "./app/__root";
 import { Route as IndexRouteImport } from "./app/index";
 
 const IndexRoute = IndexRouteImport.update({
-  getParentRoute: () => rootRouteImport,
   id: "/",
   path: "/",
+  getParentRoute: () => rootRouteImport,
 } as any);
 
 export interface FileRoutesByFullPath {

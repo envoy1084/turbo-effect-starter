@@ -5,9 +5,7 @@ import { Button } from "@repo/ui/components/button";
 export const Home = () => {
   return (
     <div>
-      <Button className="" variant="destructive">
-        Button
-      </Button>
+      <Button>Button</Button>
     </div>
   );
 };
