@@ -137,9 +137,6 @@ book/
 .githooks/
 pre-commit.log
 
-# Lockfiles to ignore globally
-*.lock
-
 # Binaries
 *.dll
 *.so
