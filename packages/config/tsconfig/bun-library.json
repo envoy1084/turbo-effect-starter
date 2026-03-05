@@ -10,7 +10,8 @@
 
     // Bundler Integration
     "moduleResolution": "Bundler",
-    "target": "ES2022"
+    "target": "ES2022",
+    "types": ["bun"]
   },
   "extends": "./base.json"
 }
